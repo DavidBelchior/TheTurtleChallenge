@@ -1,0 +1,6 @@
+﻿[
+  { "Moves": [ "m", "m", "m", "m" ] }, // Out of bounds
+  { "Moves": [ "r", "r", "m", "r", "r", "r", "m", "m", "m", "m"] }, // Success
+  { "Moves": [ "r", "m", "m" ] }, // Hit a mine
+  { "Moves": [ "r", "r","m"] } // Still in danger
+]

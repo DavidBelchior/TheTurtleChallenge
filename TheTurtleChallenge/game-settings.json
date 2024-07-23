@@ -1,0 +1,31 @@
+﻿{
+  "Board": {
+    "Width": 5, // Width of the board
+    "Height": 4, // Height of the board
+    "ExitPoint": { // Exit point of the board
+      "X": 4,
+      "Y": 2
+    },
+    "Mines": [ // List of mines on the board
+      {
+        "X": 1,
+        "Y": 1
+      },
+      {
+        "X": 3,
+        "Y": 1
+      },
+      {
+        "X": 3,
+        "Y": 3
+      }
+    ]
+  },
+  "Turtle": { // Initial position and direction of the turtle
+    "Position": {
+      "X": 0,
+      "Y": 1
+    },
+    "Direction": "North"
+  }
+}
