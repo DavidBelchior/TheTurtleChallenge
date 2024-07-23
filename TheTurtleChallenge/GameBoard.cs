@@ -12,14 +12,14 @@ namespace TheTurtleChallenge
     /// </summary>
     public class GameBoard
     {
-        public int Width { get; set; } // The width of the board.
-        public int Height { get; set; } // The height of the board.
+        public int Width { get; set; }
+        public int Height { get; set; }
 
         [JsonProperty("ExitPoint")]
-        public Point ExitPoint { get; set; } // The exit point of the board.
+        public Point ExitPoint { get; set; }
 
         [JsonProperty("Mines")]
-        public HashSet<Point> Mines { get; } // The positions of the mines on the board.
+        public HashSet<Point> Mines { get; }
 
         [JsonConstructor]
         public GameBoard(int width, int height, Point exitPoint, HashSet<Point> mines)

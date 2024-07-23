@@ -7,16 +7,16 @@ class Program
     /// </summary>
     static void Main()
     {
-        string projectDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName; // The directory of the project.
+        string projectDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName;
 
-        string gameSettingsPath = Path.Combine(projectDirectory, "game-settings.json"); // The path to the game settings file.
-        string movesPath = Path.Combine(projectDirectory, "moves.json"); // The path to the moves file.
+        string gameSettingsPath = Path.Combine(projectDirectory, "game-settings.json");
+        string movesPath = Path.Combine(projectDirectory, "moves.json");
 
-        var settings = GameSettings.LoadFromFile(gameSettingsPath); // Load the game settings.
-        var sequences = MoveSequence.LoadFromFile(movesPath); // Load the move sequences.
-        var logger = new ConsoleLogger(); // Create a logger.
-        var game = new Game(settings, logger); // Create a game.
+        var settings = GameSettings.LoadFromFile(gameSettingsPath);
+        var sequences = MoveSequence.LoadFromFile(movesPath);
+        var logger = new ConsoleLogger();
+        var game = new Game(settings, logger);
 
-        game.Play(sequences); // Play the game.
+        game.Play(sequences);
     }
 }

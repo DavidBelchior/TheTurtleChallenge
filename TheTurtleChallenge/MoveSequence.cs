@@ -12,7 +12,7 @@ namespace TheTurtleChallenge
     /// </summary>
     public class MoveSequence
     {
-        public List<char> Moves { get; } // The moves in the sequence.
+        public List<char> Moves { get; }
 
         public MoveSequence(List<char> moves) 
         {

@@ -12,8 +12,8 @@ namespace TheTurtleChallenge
     /// </summary>
     public class Turtle
     {
-        public Point Position { get; set; } // The turtle's current position.
-        public Direction Direction { get; set; } // The turtle's current direction.
+        public Point Position { get; set; }
+        public Direction Direction { get; set; }
 
         [JsonConstructor]
         public Turtle(Point position, Direction startDirection)

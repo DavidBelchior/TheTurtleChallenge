@@ -12,8 +12,8 @@ namespace TheTurtleChallenge
     /// </summary>
     public class GameSettings
     {
-        public GameBoard Board { get; } // The game board.
-        public Turtle Turtle { get; } // The turtle.
+        public GameBoard Board { get; }
+        public Turtle Turtle { get; }
 
         [JsonConstructor]
         public GameSettings(GameBoard board, Turtle turtle)

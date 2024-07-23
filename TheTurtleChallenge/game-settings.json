@@ -1,12 +1,12 @@
 ﻿{
   "Board": {
-    "Width": 5, // Width of the board
-    "Height": 4, // Height of the board
-    "ExitPoint": { // Exit point of the board
+    "Width": 5, 
+    "Height": 4, 
+    "ExitPoint": { 
       "X": 4,
       "Y": 2
     },
-    "Mines": [ // List of mines on the board
+    "Mines": [ 
       {
         "X": 1,
         "Y": 1
@@ -21,7 +21,7 @@
       }
     ]
   },
-  "Turtle": { // Initial position and direction of the turtle
+  "Turtle": { 
     "Position": {
       "X": 0,
       "Y": 1

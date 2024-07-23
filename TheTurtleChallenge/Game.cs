@@ -11,8 +11,8 @@ namespace TheTurtleChallenge
     /// </summary>
     public class Game
     {
-        private readonly GameSettings _settings; // The settings for the game.
-        private readonly ILogger _logger; // The logger for the game.
+        private readonly GameSettings _settings;
+        private readonly ILogger _logger;
 
         public Game(GameSettings settings, ILogger logger)
         {

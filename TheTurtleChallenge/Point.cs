@@ -12,8 +12,8 @@ namespace TheTurtleChallenge
     /// </summary>
     public class Point
     {
-        public int X { get; set; } // The x-coordinate of the point.
-        public int Y { get; set; } // The y-coordinate of the point.
+        public int X { get; set; }
+        public int Y { get; set; }
 
         public Point() { }
 
