@@ -58,6 +58,13 @@ C#
 
 ]
 
+In this case it started like this: 
+
+![image](https://github.com/user-attachments/assets/215eee24-d34c-4cfd-8df7-95831b4862d0)
+
+
+
+
 ### Example Output
 - Sequence 1: Out of bounds
 - Sequence 2: Success
