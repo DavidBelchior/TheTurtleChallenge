@@ -100,10 +100,6 @@ namespace TestTurtleChallenge
             Assert.True(board.IsOutOfBounds(new Point(-1, 0)));
             Assert.False(board.IsOutOfBounds(new Point(2, 2)));
         }
-
-
-        //TODO: miss test board
-
         
         [Fact]
         public void Turtle_Processes_Move_Sequence_Out_Of_Bounds()
