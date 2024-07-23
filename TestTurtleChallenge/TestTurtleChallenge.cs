@@ -3,7 +3,7 @@ using TheTurtleChallenge;
 
 namespace TestTurtleChallenge
 {
-    public class UnitTest1
+    public class TestTurtleChallenge
     {
         [Fact]
         public void Turtle_Inicializes_Correctly()
