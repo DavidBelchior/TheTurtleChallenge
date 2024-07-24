@@ -31,37 +31,62 @@ namespace TheTurtleChallenge
 
             foreach (var move in sequence.Moves)
             {
-                if (move == 'm') 
-                {
-                    turtle.Move();
-                }
-                else if (move == 'r')
-                {
-                    turtle.Rotate();
-                }
+                ExecuteMove(turtle, move);
+                var result = GetMoveResultFromPosition(turtle.Position);
 
-                if (_settings.Board.IsOutOfBounds(turtle.Position))
+                if (result != MoveResult.StillInDanger)
                 {
-                    return MoveResult.OutOfBounds;
-                }
-
-                if (_settings.Board.IsMine(turtle.Position))
-                {
-                    
-                    return MoveResult.MineHit;
-                    
-                }
-
-                if (_settings.Board.IsExit(turtle.Position))
-                {
-                    
-                    return MoveResult.Success;
-                    
+                    return result;
                 }
             }
             return MoveResult.StillInDanger;
         }
 
+        /// <summary>
+        /// Executes a move for the turtle.
+        /// </summary>
+        /// <param name="turtle"></param>
+        /// <param name="move"></param>
+        /// <exception cref="InvalidOperationException"></exception>
+        private void ExecuteMove(Turtle turtle, char move)
+        {
+            switch (move)
+            {
+                case 'm':
+                    turtle.Move();
+                    break;
+                case 'r':
+                    turtle.Rotate();
+                    break;
+                default:
+                    throw new InvalidOperationException($"Invalid move '{move}'");
+            }
+        }
+
+        /// <summary>
+        ///  Determines the result of the turtle's current position on the board.
+        /// </summary>
+        /// <param name="position"></param>
+        /// <returns></returns>
+        private MoveResult GetMoveResultFromPosition(Point position)
+        {
+            if (_settings.Board.IsOutOfBounds(position))
+            {
+                return MoveResult.OutOfBounds;
+            }
+
+            if (_settings.Board.IsMine(position))
+            {
+                return MoveResult.MineHit;
+            }
+
+            if (_settings.Board.IsExit(position))
+            {
+                return MoveResult.Success;
+            }
+
+            return MoveResult.StillInDanger;
+        }
 
         /// <summary>
         /// Allows you to play different sequences
@@ -69,7 +94,7 @@ namespace TheTurtleChallenge
         /// <param name="sequences"> list of sequences to be played </param>
         public void Play(List<MoveSequence> sequences)
         {
-            foreach(var sequence in sequences)
+            foreach (var sequence in sequences)
             {
                 var result = PlaySequence(sequence);
                 _logger.Log(result.ToString());
